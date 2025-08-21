@@ -3,56 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Isabella's Teaching Portfolio - Projects</title>
+     <link rel="stylesheet" href="starter.css">
 </head>
 <body>
           <!--Insert Text Heading-->
     <header>
-        <h1 style="color:#9f510d">Project Showcase</h1>
+        <h1>Project Showcase</h1>
     </header>
          <!--Links to Pages on Website : Unordered List Function -->
-         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="teaching.html">Teaching Practice</a></li>
-                <li><a href="Projects.html">Project Showcase</a></li>
-                <li><a href="worksamples.html">Samples of Work</a></li>
-                <li><a href="contact.html">Contact me</a></li>
-            </ul>
-        </nav>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="teaching.html">Teaching Practice</a></li>
+                    <li><a class="active" href="Projects.html">Project Showcase</a></li>
+                    <li><a href="worksamples.html">Samples of Work</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul> 
+            </div>
+    </nav>
     
         <main>
          <!--This section focuses on showcasing Projects -->
             <section>
-                <style>
-                        .flex-container {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 20px;
-                            justify-content: space-between;
-                            margin-top:20px;
-                        }
-                        .project-card {
-                        flex: 1 1 350px;                /* Responsive card width */
-                        background-color: #f9f9f9;    /* Light grey background */
-                        border: 1px solid #ddd;       /* Light border */
-                        padding: 15px;                  /* Space inside card */
-                        border-radius: 8px;             /* Rounded corners */
-                        box-shadow: 1px 2px 4px rgba(0,0,0,0.1);      /* Soft shadow */
-                        }
-                        .project-card img {
-                        width: 100%;          /* Image fills card width */
-                        height: auto;         /* Maintains aspect ratio */
-                        border-radius: 4px;   /* Slightly rounded image corners */
-                        }
-                        .project-card h3 {
-                        margin-top: 10px;     /* Space above heading */
-                        font-size: 1.1rem;    /* Slightly larger heading text */
-                        color: #2c3e50;     /* Dark grey-blue colour */
-                        }
-
-                </style>
+        
                 <div class="flex-container">
                     <div class="project-card">
                         <img src="Images/Textiles&DesignProject_1.png" alt="Image of Textiles Project: Sustainable Scrunched Top for all sizes" width="200">
@@ -67,5 +43,11 @@
                 </div>
             </section>
         </main>
+            <!--Footer Section of my page: in line with semantic HTML-->
+      <footer> 
+        <div class="container">
+          <p> &copy; 2025 Isabella Cattalini. All rights reserved.</p>
+        </div> 
+      </footer>
 </body>
 </html>

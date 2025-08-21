@@ -1,0 +1,30 @@
+h1{
+    color: #B05739;
+    font-family:'Times New Roman', Times, serif
+}
+
+body {
+    background-color:#E2F9FF;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 8%;
+}

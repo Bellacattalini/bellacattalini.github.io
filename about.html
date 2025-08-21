@@ -3,40 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website - About</title>
+    <title>Isabella's Teaching Portfolio - About</title>
+    <link rel="stylesheet" href="starter.css">
     
 </head>
 <body>
     <!--Insert Text Heading-->
     <header>
-        <h1 style="color:#9f510d">About Me</h1>
+        <h1 style=>About Me</h1>
     </header>
      <!--Links to Pages on Website : Unordered List Function -->
      <nav>
+      <div class="container">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
+            <li><a class="active" href="about.html">About Me</a></li>
             <li><a href="teaching.html">Teaching Practice</a></li>
             <li><a href="Projects.html">Project Showcase</a></li>
             <li><a href="worksamples.html">Samples of Work</a></li>
             <li><a href="contact.html">Contact me</a></li>
-        </ul>
+        </ul> 
+      </div>
     </nav>
-    <!--Insert First Image-->
-    <main>
     
-    <img src="Images/Profile Pic.png" width="200" alt="Profile picture">
-
-    <!--Insert Second Image-->
-    <img src="Images/Quote.png" width="300" alt="Teaching Quote: Design is not just about how things look, Its about how they work...">
+    <main>
 
     <!--Insert Paragraphs-->
     <!--Hello is Italic & different font-->
         <section>
-        <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><em>Hello!</em></p>
-        <p>My name is Isabella, and I am currently studying a Bachelor of Teaching & Arts in Technology at <a href="https://www.acu.edu.au/" target="_blank">ACU</a>. I have a strong passion for creativity and design, and I enjoy bringing ideas to life through both traditional and digital mediums.</p>
+            <article>
+                <div class="profile-photo"> 
+                    <img src="Images/creativearts.png" alt="Isabella undergoing Creative Arts">
+                </div>
+                <div>
+                    <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><em>Hello!</em></p>
+                    <p>My name is Isabella, and I am currently studying a Bachelor of Teaching & Arts in Technology at <a href="https://www.acu.edu.au/" target="_blank">ACU</a>. I have a strong passion for creativity and design, and I enjoy bringing ideas to life through both traditional and digital mediums.</p>
+                    <p>Outside of my studies, I love exploring new skills, working on personal projects, and spending time with friends and family. I am always eager to learn and take on new challenges that help me grow both personally and professionally.</p>
+                </div>    
 
-        <p>Outside of my studies, I love exploring new skills, working on personal projects, and spending time with friends and family. I am always eager to learn and take on new challenges that help me grow both personally and professionally.</p>
+    <!--Insert Second Image-->
+    <img src="Images/Quote.png" width="300" alt="Teaching Quote: Design is not just about how things look, Its about how they work...">
+    
+    <!--Insert 2 Paragraph : Teaching Moto-->
+        <section>
+            <article>
+                <div>
+                    <p>First line</p>
+                    <p>Second Line</p>
+                </div>   
+
+            </article>
         </section>
 
     <!--This sections focuses on providing placement overview in table formate-->
@@ -44,27 +60,7 @@
         <section>
     <h2>Placement Overview</h2>
     <style>
-table {
-  width: 100%;                /* Table spans full width */
-  border-collapse: collapse;  /* Removes double borders */
-  margin-top: 10px;           /* Space above table */
-  font-family: Arial, sans-serif;     /* Table font */
-}
-th, td {
-  border: 1px solid #ccc;   /* Light grey cell borders */
-  padding: 10px 12px;         /* Space inside cells */
-  text-align: left;           /* Aligns text to the left */
-}
-thead {
-  background-color: #f0f0f0; /* Light grey header background */
-}
-th {
-  color: #333;              /* Dark grey header text */
-  font-weight: bold;          /* Bold header text */
-}
-tr:nth-child(even) {
-  background-color: #fafafa;  /* Zebra stripe effect for even rows */
-}
+
 
     </style>
     <table>
@@ -97,6 +93,12 @@ tr:nth-child(even) {
     </tbody>
     </table>
         </section>
+        <!--Footer Section of my page: in line with semantic HTML-->
+      <footer> 
+        <div class="container">
+          <p> &copy; 2025 Isabella Cattalini. All rights reserved.</p>
+        </div> 
+      </footer>
     </main>
 </body>
 </body>
