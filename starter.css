@@ -1,3 +1,22 @@
+/* ---------- 1) CSS Reset / Base ----------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');              /* Google Fonts */
+
+*, *::before, *::after {
+  box-sizing: border-box;   /* Include padding & border in total size for all elements + pseudo-elements */
+}
+html, body { 
+  font-family: "Montserrat";
+  margin: 0;    /* Removes default browser margin */
+  padding: 0;   /* Removes default browser padding */
+}
+img { 
+  max-width: 100%;  /* Ensures images never exceed container width */
+  height: auto;     /* Maintains image aspect ratio */
+  display: block;   /* Removes small gap under images by making them block-level */
+}
+
+
 /* ---------- 2) Core Theme Tokens ----------- */
 :root {
   --brand: #1f0707;        /* primary colour */
@@ -11,8 +30,8 @@
   --shadow: 0 4px 12px rgba(0,0,0,0.08);    /* Subtle shadow for depth */
   --spacing: 16px;         /* base spacing unit */
   --maxw: 1100px;          /* content width */
-  --font-body: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;  /* Body font */
-  --font-head: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;   /* Headings font */
+  --font-body: "Bebas Neue",  system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;                /* Body font w/ google font*/
+  --font-head: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;   /* Headings font w/ goggle font */
 }
 
 
@@ -36,6 +55,7 @@ header h1 {
   width: min(100% - 2*var(--spacing), var(--maxw));   /* Responsive heading width */
   margin: 32px auto;                                  /* Centers heading */
   color: var(--head);                                 /* Special header colour */
+  font-family: "Bebas Neue";
 }
 nav {
   background: #200707;             /* Dark grey background for nav bar */
@@ -117,7 +137,7 @@ table {
   width: 100%;                /* Table spans full width */
   border-collapse: collapse;  /* Removes double borders */
   margin-top: 10px;           /* Space above table */
-  font-family:'Times New Roman', Times, serif;     /* Table font */
+  font-family:'Montserrat', Times, serif;     /* Table font */ 
 }
 th, td {
   border: 1px solid #3c0909;   /* Light grey cell borders */
@@ -166,4 +186,57 @@ tr:nth-child(even) {
     color: #3c0909;     /* Dark grey-blue colour */
 }
 
+/* ---------- 8) Cards / Gallery ------------- */
+.card-grid {
+  display: grid;                                                  /* Grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));    /* Responsive columns */
+  gap: var(--spacing);                                            /* Space between grid items */
+}
+.card {
+  background: #fff;             /* White background */
+  border-radius: var(--radius);   /* Rounded corners */
+  box-shadow: var(--shadow);      /* Soft shadow */
+  overflow: hidden;               /* Hides overflowing content */
+  display: flex;                  /* Flex layout inside card */
+  flex-direction: column;         /* Stacks content vertically */
+}
+.card img { 
+  width: 100%;                  /* Image fills card */
+}
+.card .content { 
+  padding: var(--spacing);      /* Space around content */
+}
+.card h3 { 
+  margin-top: 0.4em;        /* Space above heading */
+  margin-bottom: 0.3em;     /* Space below heading */
+}
+.card p { 
+  color: var(--muted);      /* Muted text colour */
+  margin-bottom: 0.8em;     /* Space below paragraph */
+}
+.card a { 
+  display: block;            /* Makes the whole card area clickable */
+}
+.card:hover { 
+  transform: translateY(-2px);   /* Lifts card up slightly on hover */
+  transition: transform .15s ease; /* Smooth hover animation */
+}
 
+/* ---------- 10) Footer --------------------- */
+footer {
+  margin-top: 40px;          /* Space above footer */
+  padding: 22px 0;           /* Vertical spacing */
+  background: var(--brand);  /* Brand background */
+  color: #cfd7ff;          /* Light text colour */
+}
+footer p {
+  color: white;     /* White paragraph text */
+}
+footer .container {
+  width: min(100% - 2*var(--spacing), var(--maxw));       /* Responsive width */
+  margin: 0 auto;                     /* Centered container */
+  display: flex;                      /* Flex layout */
+  justify-content: space-between;     /* Space between items */
+  gap: var(--spacing);                /* Gap between items */
+  flex-wrap: wrap;                    /* Allows wrapping on smaller screens */
+}
